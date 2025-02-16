@@ -1,0 +1,34 @@
+<div class="px-3 py-2">
+
+
+    <div class="w-75 mx-auto">
+
+        <div>
+            <p class="h5">New Task</p>
+        </div>
+
+        <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+            <div class="my-3">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" required formControlName="title" >
+
+                @if(taskForm.controls.title.touched  && taskForm.controls.title.errors){
+                    <p class="text-center text-danger fs-small">Title is required</p>
+                }
+            </div>
+
+
+            <div class="my-3">
+                <label for="title">User ID</label>
+                <input type="text" class="form-control" required formControlName="userId">
+                @if(taskForm.controls.userId.touched  && taskForm.controls.userId.errors){
+                    <p class="text-center text-danger fs-small">User ID is required</p>
+                }
+            </div>
+
+            <div>
+                <button class="btn btn-success">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

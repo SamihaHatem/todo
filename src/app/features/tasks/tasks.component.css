@@ -1,0 +1,19 @@
+td {
+    cursor: pointer;
+}
+
+.bg-pending{
+    background-color: rgb(255, 255, 172);
+}
+
+.bg-done{
+    background-color: rgb(158, 255, 158);
+}
+
+tr:hover {
+    background-color: rgba(236, 236, 236, 0.538);
+}
+
+.bg-trasnparent{
+    background-color: transparent !important;
+}

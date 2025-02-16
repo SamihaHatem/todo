@@ -1,0 +1,8 @@
+.flex-grow{
+    flex-grow: 1 !important;
+}
+
+.min-h-100vh{
+    min-height: 100vh !important;
+}
+
