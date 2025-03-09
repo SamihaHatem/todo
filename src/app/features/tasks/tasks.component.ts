@@ -44,7 +44,8 @@ export class TasksComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(private tasksServices: TaskService) { }
 
   open(content: TemplateRef<any>, element: any) {
-    this.selectedTask = element;
+
+    this.selectedTask = JSON.parse(JSON.stringify(element));
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then(
       (result) => {
         this.closeResult.set(`Closed with: ${result}`);
